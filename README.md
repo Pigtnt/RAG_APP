@@ -25,3 +25,8 @@ uv run ingest.py
 ```
 uv run streamlit run app.py
 ```
+
+步驟5 : 進入APP網頁
+```
+http://localhost:8501
+```
