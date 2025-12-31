@@ -38,7 +38,10 @@ def main():
     raw_docs = load_pdf_with_tables(Config.PDF_PATH)
     
     # 2. 切分
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000, 
+        chunk_overlap=200, 
+        separators=["\n\n", "\n", "。", "！", "？", " ", ""])
     splits = text_splitter.split_documents(raw_docs)
     print(f"📦 切分完成：共 {len(splits)} 個區塊")
 
@@ -50,7 +53,7 @@ def main():
         encode_kwargs={'normalize_embeddings': True}
     )
 
-    # 4. 存入 Chroma (關鍵：設定 persist_directory)
+    # 4. 存入 Chroma (關鍵：設定 persist  _directory)
     print(f"💾 寫入資料庫至 {Config.DB_PATH} ...")
     vectorstore = Chroma.from_documents(
         documents=splits,
