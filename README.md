@@ -1,7 +1,7 @@
 # RAG練習_MVC架構_網頁APP
 
 # 安裝 uv 環境
-uv: [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
+uv: https://docs.astral.sh/uv/getting-started/installation/
 
 步驟1 : 同步專案環境並建立虛擬環境
 ```
