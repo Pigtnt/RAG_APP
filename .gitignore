@@ -5,10 +5,9 @@ build/
 dist/
 wheels/
 *.egg-info
+db/
 
 # Virtual environments
 .venv
-
 .env
-story.md
-db/
+_main.py

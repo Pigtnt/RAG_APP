@@ -1,4 +1,3 @@
-# config.py
 import os
 from dotenv import load_dotenv
 
@@ -14,6 +13,7 @@ class Config:
     # 模型與 API 設定
     API_KEY = os.getenv("GEMINI_API_KEY")
     GENERATOR_MODEL = "gemma-3-12b-it"
+    JUDGE_MODEL = "gemma-3-27b-it"
     EMBEDDING_MODEL = "intfloat/multilingual-e5-large"
     RERANKER_MODEL = "BAAI/bge-reranker-base"
     
